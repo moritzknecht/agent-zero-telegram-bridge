@@ -6,7 +6,7 @@ Replying to @AgentZero (or similar):
 ⚡️ Auto-starts with container (optional)
 ⚡️ Zero idle costs
 
-🔹 **Telegram (Recommended):**
+🔹 **Telegram:**
 https://github.com/winboost/agent-zero-telegram-bridge
 
 🔹 **Discord:**
