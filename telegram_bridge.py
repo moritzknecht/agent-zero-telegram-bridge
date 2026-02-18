@@ -160,6 +160,11 @@ async def send_to_agent(message_text: str, context_id: str = "") -> dict:
     headers = {
         "Content-Type": "application/json",
         "X-API-KEY": A0_API_KEY,
+        # Identify the request as coming from localhost.
+        # Required when a reverse proxy (e.g. Cloudflare tunnel) is active and
+        # SearXNG's bot-detection middleware sits in front of port 80.
+        "X-Forwarded-For": "127.0.0.1",
+        "X-Real-IP": "127.0.0.1",
     }
 
     timeout = aiohttp.ClientTimeout(total=A0_TIMEOUT)
