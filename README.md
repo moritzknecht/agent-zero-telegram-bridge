@@ -53,6 +53,8 @@ Again, you can utilize the Files browser in Agent Zero.
 docker exec agent-zero /opt/venv/bin/pip install aiohttp python-telegram-bot python-dotenv
 ```
 
+> **Note:** Packages that are already pre-installed will simply report as 'already satisfied' and be safely skipped.
+
 ### 4. Launch the bot
 
 I'd recommend launching with `-it` first to confirm everything starts cleanly:
