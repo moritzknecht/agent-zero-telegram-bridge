@@ -627,7 +627,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
         except asyncio.CancelledError:
             log.info(f"Request cancelled for chat {chat_id}")
-            await update.message.reply_text("⚡ Vorherige Anfrage abgebrochen.")
+            await update.message.reply_text("⚡ Request cancelled.")
         except asyncio.TimeoutError:
             log.warning(f"Timeout waiting for Agent Zero (>{A0_TIMEOUT}s)")
             await update.message.reply_text(
@@ -702,7 +702,7 @@ async def handle_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await processing_msg.delete()
             except Exception:
                 pass
-            await update.message.reply_text("⚡ Vorherige Anfrage abgebrochen.")
+            await update.message.reply_text("⚡ Request cancelled.")
         except asyncio.TimeoutError:
             log.warning(f"Timeout waiting for Agent Zero (>{A0_TIMEOUT}s)")
             await update.message.reply_text(
